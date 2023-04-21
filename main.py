@@ -18,6 +18,7 @@ def GetCydiaRepoPackages(repo,get_way):
     print('[Messages]User-Agent:',Cydia_User_Agent)
     requests.session()
     requests.keep_alive = False
+    print('[Messages]Downloading....')
     response = requests.get(repo+"/Packages.gz",headers=headers) #获取Packages gz文件
     
     
