@@ -14,6 +14,8 @@ def GetCydiaRepoPackages(repo,get_way): #下载Packages 文件
     print('[Messages]GetCydiaRepoPackages Loaded')
     #请求头
     headers = {
+        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" ,
+        "Host":repo ,
         "User-Agent":Cydia_User_Agent
     }
     print('[Messages]User-Agent:',Cydia_User_Agent)
@@ -63,6 +65,7 @@ def LoadPackages(ways):
 
     while i < file_long:
         #print(file_w[i])
+
         i = i +1
 
     #print(str(file_data))
