@@ -34,13 +34,19 @@ def GetCydiaRepoPackages(repo,get_way):
     #print(response.content.decode('utf-8'))
 
     
-    
-
-
-
-if sys.argv[1] == "get_packages" and len(sys.argv ) >= 4:
-    GetCydiaRepoPackages(sys.argv[2],sys.argv[3])
-else:
+def CommandHelp():
     print('MDydia_OpenSource Version ' + version)
-    print('常用指令：')
+    print('\n'+'常用指令：')
     print('get_packages [源地址] [获取方式]' + '\n' + '获取方式：意为得到Packages 压缩文件的方式，如gz,bz2')
+    print('')
+
+
+if len(sys.argv) >= 2:
+
+    if sys.argv[1] == "get_packages" and len(sys.argv ) >= 4:
+        GetCydiaRepoPackages(sys.argv[2],sys.argv[3])
+    else:
+        CommandHelp()
+
+else:
+    CommandHelp()
