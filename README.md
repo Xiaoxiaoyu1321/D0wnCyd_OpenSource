@@ -12,6 +12,7 @@
 #### 在安装好Python 以后，请使用pip 指令安装以下所需要的Python 包
 ```
 requests
+configparser
 ```
 #### 当一切准备就绪以后，您便可以根据下面的指令来进行使用了。
 
