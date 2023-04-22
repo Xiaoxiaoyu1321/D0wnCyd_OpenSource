@@ -22,13 +22,23 @@ def GetCydiaRepoPackages(repo,get_way):
     response = requests.get(repo+"/Packages.gz",headers=headers) #获取Packages gz文件
     
     
-    f = open("./Packages."+get_way,'a')
-    f.write("")
-    f.close()
+    #f = open("./Packages."+get_way,'a')
+    #f.close()
+    try:
+        os.mkdir('./Packages')
+        os.mkdir('./Downloads')
+    except:
+        pass
+
+    path = r"./Packages/Packages."+get_way
+    with open(path,'wb') as f:
+        f.write(response.content)
+   
+
     print('[Messages]Writing....')
-    fd = os.open('./Packages.'+get_way,1)
-    os.write(fd,response.content)
-    os.close(fd)
+    #fd = os.open(path,1)
+    #os.write(fd,response.content)
+    #os.close(fd)
     print('[Messages]Done')
     #os.mkdir('./Packages')
     #print(response.content.decode('utf-8'))
