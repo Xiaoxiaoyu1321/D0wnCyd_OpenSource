@@ -3,7 +3,7 @@ import sys
 import os
 import configparser
 
-version = "b0.1"
+version = "b0.1.1"
 #print("get value",len(sys.argv)) #打印出收到的传入命令行
 #print(sys.argv) #打印出命令行
 Cydia_User_Agent = "Cydia/0.9 CFNetwork/711.5.6 Darwin/14.0.0" #设置Cydia User-Agent
