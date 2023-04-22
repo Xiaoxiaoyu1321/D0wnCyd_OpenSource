@@ -1,7 +1,7 @@
 # MDydia_OpenSource
 
 #### 这是一个可以在线下载Cydia 源上的deb文件的软件
-
+#### This is a software that can download deb files on Cydia source online.
 ### **关于这个软件**
 ##### 这是一个简单的Cydia 软件园爬取程序，现在的开源版本仍处在一个简易的命令行版本   
 ##### 起初创建这个软件就是为了方便用户下载Cydia 源的deb文件
