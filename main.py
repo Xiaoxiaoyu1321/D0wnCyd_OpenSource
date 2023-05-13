@@ -13,16 +13,16 @@ Cydia_User_Agent = "Cydia/0.9 CFNetwork/711.5.6 Darwin/14.0.0" #设置Cydia User
 def GetCydiaRepoPackages(repo,get_way): #下载Packages 文件
     print('[Messages]GetCydiaRepoPackages Loaded')
     #请求头
-    headers = {
+    header = {
         "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" ,
         "Host":repo ,
         "User-Agent":Cydia_User_Agent
     }
     print('[Messages]User-Agent:',Cydia_User_Agent)
     requests.session()
-    requests.keep_alive = False
+    requests.keep_alive = True
     print('[Messages]Downloading....')
-    response = requests.get(repo+"/Packages.gz",headers=headers) #获取Packages gz文件
+    response = requests.get(repo+"/Packages.gz",headers=header) #获取Packages gz文件
     
     
     #f = open("./Packages."+get_way,'a')
